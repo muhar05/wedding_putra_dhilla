@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Pernikahan | Putra & Dhilla</title>
+
+  <!-- IMPORTANT: Link Preview (Open Graph & Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pernikahan Putra & Dhilla" />
+  <meta property="og:description"
+    content="Kabar bahagia! Kami mengundang Anda untuk merayakan hari istimewa kami pada Minggu, 15 Februari 2026." />
+  <meta property="og:url" content="https://wedding-putra-dhilla.vercel.app" />
+  <meta property="og:image" content="https://wedding-putra-dhilla.vercel.app/assets/carousel/carousel4.jpeg" />
+  <meta property="og:image:secure_url"
+    content="https://wedding-putra-dhilla.vercel.app/assets/carousel/carousel4.jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta itemprop="image" content="https://wedding-putra-dhilla.vercel.app/assets/carousel/carousel4.jpeg" />
+  <link rel="image_src" href="https://wedding-putra-dhilla.vercel.app/assets/carousel/carousel4.jpeg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Wedding of Putra & Dhilla" />
+  <meta name="twitter:description" content="Minggu, 15 Februari 2026 - Kota Modern, Tangerang." />
+  <meta name="twitter:image" content="https://wedding-putra-dhilla.vercel.app/assets/carousel/carousel4.jpeg" />
+
+  <!-- Tailwind CSS (for layout utilities) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body class="antialiased">
+
+
+  <!-- Cover Section -->
+  <section id="cover" class="hero-cover flex items-center justify-center text-white">
+    <div class="absolute inset-0 hero-bg overflow-hidden">
+      <img src="assets/hero/HeroSection.JPG" alt="Hero" class="animate-hero-zoom-out" />
+    </div>
+    <div class="relative z-10 text-center px-4">
+      <div class="mb-6">
+        <span class="text-xs uppercase tracking-[0.3em] font-light animate-hero-fade-up delay-1">Pernikahan dari</span>
+        <h1 class="font-script text-6xl md:text-8xl mt-4 mb-2 animate-hero-fade-up delay-2">Putra & Dhilla</h1>
+        <p class="text-sm tracking-[0.2em] font-light uppercase animate-hero-fade-up delay-3">15 • 02 • 2026</p>
+      </div>
+
+      <div
+        class="max-w-xs mx-auto mb-10 p-6 border border-white/20 bg-black/10 backdrop-blur-sm rounded-lg animate-hero-fade-up delay-4">
+        <p class="text-[10px] uppercase tracking-wider mb-2 opacity-80">Kepada Bapak/Ibu/Saudara/i</p>
+        <h2 id="guestName" class="text-lg font-serif">Tamu Undangan</h2>
+      </div>
+
+      <button id="openInvitationBtn" class="btn-primary animate-hero-fade-up delay-4">
+        Buka Undangan
+      </button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="hidden">
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+      <!-- Desktop Sidebar -->
+      <aside class="sticky-aside hidden md:block">
+        <img src="assets/hero/HeroSection.png" alt="Sticky" class="w-full h-full object-cover" />
+        <div class="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/60 to-transparent">
+          <h2 class="font-script text-6xl text-white mb-2 fade-up-aside">Putra & Dhilla</h2>
+          <p class="text-white/80 text-sm tracking-widest uppercase fade-up-aside">15 Februari 2026</p>
+        </div>
+      </aside>
+
+      <!-- Scrollable Area -->
+      <div id="scrollableContent" class="flex-1 batik-edges">
+
+        <!-- Welcome Quote -->
+        <section class="bg-white scroll-anim">
+          <div class="max-w-xl mx-auto text-center px-4">
+            <span class="section-subtitle">Surat Cinta</span>
+            <h2 class="font-script text-4xl mb-6">Bismillah</h2>
+            <p class="text-lg italic text-gray-600 mb-6 font-serif">
+              "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu
+              sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+              sayang."
+            </p>
+            <span class="text-xs uppercase tracking-widest text-light">(QS. Ar-Rum: 21)</span>
+          </div>
+        </section>
+
+        <!-- Mempelai -->
+        <section class="bg-cream scroll-anim">
+          <div class="max-w-2xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <span class="section-subtitle">Mempelai</span>
+              <h2 class="section-title">Pasangan Berbahagia</h2>
+            </div>
+
+            <div class="space-y-20">
+              <!-- Groom -->
+              <div class="text-center">
+                <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
+                  <img src="assets/putra.jpeg" class="w-full h-full object-cover" alt="Groom" />
+                </div>
+                <h3 class="font-script text-4xl text-gold mb-4" style="color: var(--primary-gold)">Agsyaridan Putra</h3>
+                <p class="text-sm text-light mb-1">Putra Dari</p>
+                <p class="text-gray-700 font-medium">Alm Bapak Syarif Zainudin & Ibu Syahban Dana Rubani</p>
+              </div>
+
+              <!-- Bride -->
+              <div class="text-center">
+                <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
+                  <img src="assets/dhilla.jpeg" class="w-full h-full object-cover" alt="Bride" />
+                </div>
+                <h3 class="font-script text-4xl text-gold mb-4" style="color: var(--primary-gold)">Fadhillah Nur
+                  Syamsiah</h3>
+                <p class="text-sm text-light mb-1">Putri Dari</p>
+                <p class="text-gray-700 font-medium">Bapak Slamet Nuryasin & Ibu Euis Ariesti Syamsiah</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Acara -->
+        <section class="bg-white scroll-anim">
+          <div class="max-w-xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <span class="section-subtitle">Save The Date</span>
+              <h2 class="section-title">Detail Acara</h2>
+            </div>
+
+            <div class="space-y-8">
+              <!-- Akad -->
+              <div class="event-card">
+                <div class="flex flex-col items-center text-center">
+                  <div class="mb-4 text-gold" style="color: var(--primary-gold)"><i class="fas fa-ring fa-2x"></i></div>
+                  <h4 class="text-xl font-bold mb-4">Akad Nikah</h4>
+                  <div class="space-y-2 text-gray-600 text-sm">
+                    <p>Minggu, 15 Februari 2026</p>
+                    <p>08.00 - 10.00 WIB</p>
+                    <p class="mt-4 font-bold text-gray-800">Renjana Titik Kumpul</p>
+                    <p class="text-xs mb-2">Wedding Venue Tangerang | Coffee & Social House</p>
+                    <p>Jl. Taman Golf Boulevard No.21, Kota Modern, Cipondoh, Tangerang</p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/q5Tt7QHfkRfV9xzeA" target="_blank" class="btn-outline mt-6">Maps</a>
+                </div>
+              </div>
+
+              <!-- Resepsi -->
+              <div class="event-card">
+                <div class="flex flex-col items-center text-center">
+                  <div class="mb-4 text-gold" style="color: var(--primary-gold)"><i
+                      class="fas fa-glass-cheers fa-2x"></i></div>
+                  <h4 class="text-xl font-bold mb-4">Resepsi</h4>
+                  <div class="space-y-2 text-gray-600 text-sm">
+                    <p>Minggu, 15 Februari 2026</p>
+                    <p>10.00 - 13.00 WIB</p>
+                    <p class="mt-4 font-bold text-gray-800">Renjana Titik Kumpul</p>
+                    <p class="text-xs mb-2">Wedding Venue Tangerang | Coffee & Social House</p>
+                    <p>Jl. Taman Golf Boulevard No.21, Kota Modern, Cipondoh, Tangerang</p>
+                  </div>
+                  <a href="https://maps.app.goo.gl/q5Tt7QHfkRfV9xzeA" target="_blank" class="btn-outline mt-6">Maps</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Countdown -->
+        <section class="bg-cream scroll-anim">
+          <div class="max-w-xl mx-auto px-4 text-center">
+            <div class="mb-12">
+              <span class="section-subtitle">Counting Down</span>
+              <h2 class="section-title">Menghitung Hari</h2>
+            </div>
+
+            <div id="countdown" class="countdown-container mb-10">
+              <div class="countdown-item">
+                <span id="days" class="countdown-number" style="color: var(--primary-gold)">00</span>
+                <span class="countdown-label">Hari</span>
+              </div>
+              <div class="countdown-item">
+                <span id="hours" class="countdown-number" style="color: var(--primary-gold)">00</span>
+                <span class="countdown-label">Jam</span>
+              </div>
+              <div class="countdown-item">
+                <span id="minutes" class="countdown-number" style="color: var(--primary-gold)">00</span>
+                <span class="countdown-label">Menit</span>
+              </div>
+              <div class="countdown-item">
+                <span id="seconds" class="countdown-number" style="color: var(--primary-gold)">00</span>
+                <span class="countdown-label">Detik</span>
+              </div>
+            </div>
+
+            <button id="saveToCalendar" class="btn-primary">Ingatkan Saya</button>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="bg-white scroll-anim">
+          <div class="max-w-xl mx-auto px-4">
+            <div class="text-center mb-12">
+              <span class="section-subtitle">Momen</span>
+              <h2 class="section-title">Galeri</h2>
+            </div>
+
+            <div class="swiper gallery-swiper mb-10">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="gallery-slide"><img src="assets/carousel/carousel1.jpeg" alt="Momen 1" /></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-slide"><img src="assets/carousel/carousel2.JPG" alt="Momen 2" /></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-slide"><img src="assets/carousel/carousel3.jpeg" alt="Momen 3" /></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="gallery-slide"><img src="assets/carousel/carousel4.jpeg" alt="Momen 4" /></div>
+                </div>
+              </div>
+              <div class="mt-4 flex justify-center gap-2">
+                <div class="swiper-pagination !static"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RSVP -->
+        <section class="bg-white scroll-anim">
+          <div class="max-w-xl mx-auto px-4">
+            <div class="text-center mb-16">
+              <span class="section-subtitle">Reservasi</span>
+              <h2 class="section-title">Konfirmasi Kehadiran</h2>
+              <p class="text-sm text-light max-w-sm mx-auto">Kami sangat menantikan kehadiran Bapak/Ibu/Saudara/i untuk
+                merayakan momen spesial ini bersama kami.</p>
+            </div>
+
+            <form id="wishForm" class="max-w-md mx-auto mb-20">
+              <div class="form-group">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" id="name" class="form-input" placeholder="Masukkan nama Anda" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Kehadiran</label>
+                <select id="attendance" class="form-input" required>
+                  <option value="hadir">Akan Hadir</option>
+                  <option value="mungkin">Mungkin Hadir</option>
+                  <option value="tidak">Berhalangan</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Ucapan & Doa</label>
+                <textarea id="message" rows="4" class="form-input" placeholder="Tulis pesan Anda..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="w-full btn-primary mt-4">Kirim RSVP</button>
+            </form>
+
+            <div class="text-center mb-10">
+              <h4 class="font-serif text-xl mb-6">Ucapan Sahabat</h4>
+              <div id="wishList" class="space-y-4 max-h-[400px] overflow-y-auto pr-2">
+                <!-- Data from localStorage -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gift -->
+        <section class="bg-cream scroll-anim">
+          <div class="max-w-xl mx-auto px-4 text-center">
+            <div class="mb-12">
+              <span class="section-subtitle">Hadiah</span>
+              <h2 class="section-title">Tanda Kasih</h2>
+              <p class="text-sm text-light max-w-sm mx-auto">Doa restu Anda adalah hadiah teristimewa, namun bagi yang
+                ingin memberikan kado digital:</p>
+            </div>
+
+            <div class="space-y-6 max-w-sm mx-auto">
+              <div class="p-6 bg-white border border-gray-100 rounded-lg">
+                <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--primary-gold)">BCA</span>
+                <p class="text-xl font-medium my-2">4740740780</p>
+                <p class="text-xs text-light">A/N Agsyaridan Putra</p>
+              </div>
+              <div class="p-6 bg-white border border-gray-100 rounded-lg">
+                <span class="text-xs uppercase tracking-widest font-bold"
+                  style="color: var(--primary-gold)">Mandiri</span>
+                <p class="text-xl font-medium my-2">1010014152878</p>
+                <p class="text-xs text-light">A/N Fadhillah Nur Syamsiah</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-16 bg-white border-t border-gray-100 text-center">
+          <h2 class="font-script text-5xl mb-6">Putra & Dhilla</h2>
+          <p class="text-xs uppercase tracking-[0.3em] font-light text-light mb-8">15 Februari 2026</p>
+          <div class="w-16 h-px bg-gray-200 mx-auto mb-8"></div>
+          <p class="text-[10px] uppercase tracking-widest text-light">Dibuat dengan cinta untuk hari yang kekal.</p>
+        </footer>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
