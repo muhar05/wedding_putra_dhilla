@@ -293,28 +293,65 @@
         <!-- Gift -->
         <section class="bg-cream scroll-anim">
           <div class="max-w-xl mx-auto px-4 text-center">
-            <div class="mb-12">
+            <div class="mb-8">
               <span class="section-subtitle">Hadiah</span>
               <h2 class="section-title">Tanda Kasih</h2>
-              <p class="text-sm text-light max-w-sm mx-auto">Doa restu Anda adalah hadiah teristimewa, namun bagi yang
-                ingin memberikan kado digital:</p>
+              <dt class="text-sm text-light max-w-sm mx-auto mb-10">Doa restu Anda adalah hadiah teristimewa, namun bagi
+                yang
+                ingin memberikan kado digital dapat melalui tautan di bawah ini:</dt>
             </div>
 
-            <div class="space-y-6 max-w-sm mx-auto">
-              <div class="p-6 bg-white border border-gray-100 rounded-lg">
-                <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--primary-gold)">BCA</span>
-                <p class="text-xl font-medium my-2">4740740780</p>
-                <p class="text-xs text-light">A/N Agsyaridan Putra</p>
-              </div>
-              <div class="p-6 bg-white border border-gray-100 rounded-lg">
-                <span class="text-xs uppercase tracking-widest font-bold"
-                  style="color: var(--primary-gold)">Mandiri</span>
-                <p class="text-xl font-medium my-2">1010014152878</p>
-                <p class="text-xs text-light">A/N Fadhillah Nur Syamsiah</p>
-              </div>
-            </div>
+            <button id="openGiftModal" class="btn-primary">
+              <i class="fas fa-gift mr-2"></i> Kirim Kado
+            </button>
           </div>
         </section>
+
+        <!-- Gift Modal -->
+        <div id="giftModal"
+          class="fixed inset-0 z-[2000] hidden items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div class="bg-white w-full max-w-md rounded-2xl overflow-hidden shadow-2xl animate-modal-zoom">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-cream">
+              <h3 class="font-serif text-2xl">Kirim Kado Digital</h3>
+              <button id="closeGiftModal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                <i class="fas fa-times fa-lg"></i>
+              </button>
+            </div>
+            <div class="p-8 space-y-6">
+              <p class="text-sm text-center text-gray-500 mb-6">Silakan salin nomor rekening di bawah ini:</p>
+
+              <!-- BCA Card -->
+              <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm relative group">
+                <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--primary-gold)">BCA</span>
+                <div class="flex items-center justify-between mt-2">
+                  <p id="norek-bca" class="text-xl font-medium tracking-wider">4740740780</p>
+                  <button onclick="copyToClipboard('norek-bca')"
+                    class="p-2 text-gray-400 hover:text-gold transition-colors" title="Salin Rekening">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <p class="text-xs text-light mt-1 uppercase">A/N Agsyaridan Putra</p>
+              </div>
+
+              <!-- Mandiri Card -->
+              <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm relative group">
+                <span class="text-xs uppercase tracking-widest font-bold"
+                  style="color: var(--primary-gold)">Mandiri</span>
+                <div class="flex items-center justify-between mt-2">
+                  <p id="norek-mandiri" class="text-xl font-medium tracking-wider">1010014152878</p>
+                  <button onclick="copyToClipboard('norek-mandiri')"
+                    class="p-2 text-gray-400 hover:text-gold transition-colors" title="Salin Rekening">
+                    <i class="fas fa-copy"></i>
+                  </button>
+                </div>
+                <p class="text-xs text-light mt-1 uppercase">A/N Fadhillah Nur Syamsiah</p>
+              </div>
+
+              <p class="text-[10px] text-center text-gray-400 italic">Terima kasih atas segala doa dan kado yang Anda
+                berikan.</p>
+            </div>
+          </div>
+        </div>
 
         <!-- Footer -->
         <footer class="py-16 bg-white border-t border-gray-100 text-center">

@@ -207,6 +207,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Gift Modal Logic
+  const giftModal = document.getElementById("giftModal");
+  const openGiftModalBtn = document.getElementById("openGiftModal");
+  const closeGiftModalBtn = document.getElementById("closeGiftModal");
+
+  if (openGiftModalBtn && giftModal) {
+    openGiftModalBtn.addEventListener("click", () => {
+      giftModal.classList.remove("hidden");
+      giftModal.classList.add("flex");
+      document.body.style.overflow = "hidden"; // Prevent scroll
+    });
+
+    const closeModal = () => {
+      giftModal.classList.add("hidden");
+      giftModal.classList.remove("flex");
+      document.body.style.overflow = "auto";
+    };
+
+    closeGiftModalBtn.addEventListener("click", closeModal);
+    giftModal.addEventListener("click", (e) => {
+      if (e.target === giftModal) closeModal();
+    });
+  }
+
+  // Global Copy function
+  window.copyToClipboard = function (elementId) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      // Basic feedback (optional: use a toast)
+      const btn = event.currentTarget;
+      const originalInner = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-check text-green-500"></i>';
+      setTimeout(() => {
+        btn.innerHTML = originalInner;
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  };
+
   // Init
   setGuestName();
   renderWishes();
