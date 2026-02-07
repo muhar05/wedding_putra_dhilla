@@ -27,6 +27,9 @@
     content="Kabar bahagia! Kami mengundang Anda untuk merayakan hari istimewa kami pada Minggu, 15 Februari 2026." />
   <meta itemprop="image" content="https://wedding-putra-dhilla.vercel.app/assets/thumbnail.jpg" />
 
+  <!-- Preload Critical Assets -->
+  <link rel="preload" as="image" href="assets/hero/HeroSection.JPG" fetchpriority="high">
+
   <!-- Tailwind CSS (for layout utilities) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -53,7 +56,7 @@
   <!-- Cover Section -->
   <section id="cover" class="hero-cover flex items-center justify-center text-white">
     <div class="absolute inset-0 hero-bg overflow-hidden">
-      <img src="assets/hero/HeroSection.JPG" alt="Hero" class="animate-hero-zoom-out" />
+      <img src="assets/hero/HeroSection.JPG" alt="Hero" class="animate-hero-zoom-out" fetchpriority="high" />
     </div>
     <div class="relative z-10 text-center px-4">
       <div class="mb-6">
@@ -80,7 +83,7 @@
 
       <!-- Desktop Sidebar -->
       <aside class="sticky-aside hidden md:block">
-        <img src="assets/hero/HeroSection.png" alt="Sticky" class="w-full h-full object-cover" />
+        <img src="assets/hero/HeroSection.png" alt="Sticky" class="w-full h-full object-cover" loading="lazy" />
         <div class="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/60 to-transparent">
           <h2 class="font-script text-6xl text-white mb-2 fade-up-aside">Putra & Dhilla</h2>
           <p class="text-white/80 text-sm tracking-widest uppercase fade-up-aside">15 Februari 2026</p>
@@ -116,7 +119,7 @@
               <!-- Groom -->
               <div class="text-center">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                  <img src="assets/putra.jpeg" class="w-full h-full object-cover" alt="Groom" />
+                  <img src="assets/putra.jpeg" class="w-full h-full object-cover" alt="Groom" loading="lazy" />
                 </div>
                 <h3 class="font-script text-4xl text-gold mb-4" style="color: var(--primary-gold)">Agsyaridan Putra</h3>
                 <p class="text-sm text-light mb-1">Putra Dari</p>
@@ -126,7 +129,7 @@
               <!-- Bride -->
               <div class="text-center">
                 <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
-                  <img src="assets/dhilla.jpeg" class="w-full h-full object-cover" alt="Bride" />
+                  <img src="assets/dhilla.jpeg" class="w-full h-full object-cover" alt="Bride" loading="lazy" />
                 </div>
                 <h3 class="font-script text-4xl text-gold mb-4" style="color: var(--primary-gold)">Fadhillah Nur
                   Syamsiah</h3>
@@ -224,16 +227,20 @@
             <div class="swiper gallery-swiper mb-10">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="gallery-slide"><img src="assets/carousel/carousel1.jpeg" alt="Momen 1" /></div>
+                  <div class="gallery-slide"><img src="assets/carousel/carousel1.jpeg" alt="Momen 1" loading="lazy" />
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery-slide"><img src="assets/carousel/carousel2.JPG" alt="Momen 2" /></div>
+                  <div class="gallery-slide"><img src="assets/carousel/carousel2.JPG" alt="Momen 2" loading="lazy" />
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery-slide"><img src="assets/carousel/carousel3.jpeg" alt="Momen 3" /></div>
+                  <div class="gallery-slide"><img src="assets/carousel/carousel3.jpeg" alt="Momen 3" loading="lazy" />
+                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="gallery-slide"><img src="assets/carousel/carousel4.jpeg" alt="Momen 4" /></div>
+                  <div class="gallery-slide"><img src="assets/carousel/carousel4.jpeg" alt="Momen 4" loading="lazy" />
+                  </div>
                 </div>
               </div>
               <div class="mt-4 flex justify-center gap-2">
