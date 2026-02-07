@@ -497,43 +497,8 @@ section {
   }
 }
 
-/* Music Control Button */
-.music-control {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--primary-gold);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
-  border: none;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.music-control:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
-
-.fa-spin-slow {
-  animation: fa-spin 5s linear infinite;
-}
-
-.music-control.paused i {
-  animation-play-state: paused;
-}
-
 @media (max-width: 768px) {
   .music-control {
-    bottom: 1.5rem;
-    right: 1.5rem;
-    width: 3rem;
-    height: 3rem;
+    display: none;
   }
 }
