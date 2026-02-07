@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveToCalendarBtn = document.getElementById("saveToCalendar");
   const wishForm = document.getElementById("wishForm");
   const wishList = document.getElementById("wishList");
+  const bgMusic = document.getElementById("bgMusic");
+  const musicToggle = document.getElementById("musicToggle");
 
+  let isPlaying = false;
 
   // Invitation Opening Logic
   openInvitationBtn.addEventListener("click", function (e) {
@@ -16,6 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
     this.disabled = true;
     this.style.pointerEvents = "none";
     this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Membuka...';
+
+    // Play Music
+    if (bgMusic) {
+      bgMusic.play().then(() => {
+        isPlaying = true;
+        musicToggle.classList.remove("hidden");
+      }).catch(error => {
+        console.log("Audio play failed:", error);
+      });
+    }
 
     confetti({
       particleCount: 100,
@@ -48,6 +61,20 @@ document.addEventListener("DOMContentLoaded", () => {
         coverSection.style.display = "none";
       }, 1000);
     }, 900);
+  });
+
+  // Music Toggle logic
+  musicToggle.addEventListener("click", () => {
+    if (isPlaying) {
+      bgMusic.pause();
+      musicToggle.classList.add("paused");
+      musicToggle.innerHTML = '<i class="fas fa-play"></i>';
+    } else {
+      bgMusic.play();
+      musicToggle.classList.remove("paused");
+      musicToggle.innerHTML = '<i class="fas fa-compact-disc fa-spin-slow"></i>';
+    }
+    isPlaying = !isPlaying;
   });
 
   // Wedding date
