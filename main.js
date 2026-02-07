@@ -163,18 +163,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set guest name from URL
   function setGuestName() {
     const urlParams = new URLSearchParams(window.location.search);
-    // Support multiple parameter names: to, name, kepada
-    const name = urlParams.get("to") || urlParams.get("name") || urlParams.get("kepada");
-
+    const name = urlParams.get("to");
     if (name) {
-      // Decode and capitalize properly
-      const decodedName = decodeURIComponent(name.replace(/\+/g, ' '));
-      const formattedName = decodedName
-        .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-        .join(' ');
-
-      document.getElementById("guestName").textContent = formattedName;
+      // Replace + with space if decodeURIComponent doesn't (though URLSearchParams usually handles it)
+      const decodedName = name.replace(/\+/g, ' ');
+      document.getElementById("guestName").textContent = decodedName;
     }
   }
 
