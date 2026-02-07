@@ -163,9 +163,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set guest name from URL
   function setGuestName() {
     const urlParams = new URLSearchParams(window.location.search);
-    const name = urlParams.get("to");
+    // Support multiple parameter names: to, name, kepada
+    const name = urlParams.get("to") || urlParams.get("name") || urlParams.get("kepada");
+
     if (name) {
-      document.getElementById("guestName").textContent = decodeURIComponent(name);
+      // Decode and capitalize properly
+      const decodedName = decodeURIComponent(name.replace(/\+/g, ' '));
+      const formattedName = decodedName
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(' ');
+
+      document.getElementById("guestName").textContent = formattedName;
     }
   }
 
