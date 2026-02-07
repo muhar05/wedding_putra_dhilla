@@ -232,21 +232,48 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Global Copy function
-  window.copyToClipboard = function (elementId) {
-    const text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-      showToast("Berhasil disalin ke clipboard!");
+  window.copyToClipboard = function (elementId, btnElement) {
+    const textElement = document.getElementById(elementId);
+    if (!textElement) return;
 
-      // Icon feedback
-      const btn = event.currentTarget;
+    const text = textElement.innerText;
+
+    const updateIcon = (btn) => {
+      if (!btn) return;
       const originalInner = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-check text-green-500"></i>';
       setTimeout(() => {
         btn.innerHTML = originalInner;
       }, 2000);
+    };
+
+    // Fallback for older browsers
+    const fallbackCopy = (val) => {
+      const textArea = document.createElement("textarea");
+      textArea.value = val;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast("Berhasil disalin ke clipboard!");
+        updateIcon(btnElement);
+      } catch (err) {
+        showToast("Gagal menyalin teks.");
+      }
+      document.body.removeChild(textArea);
+    };
+
+    if (!navigator.clipboard) {
+      fallbackCopy(text);
+      return;
+    }
+
+    navigator.clipboard.writeText(text).then(() => {
+      showToast("Berhasil disalin ke clipboard!");
+      updateIcon(btnElement);
     }).catch(err => {
       console.error('Failed to copy: ', err);
-      showToast("Gagal menyalin teks.");
+      fallbackCopy(text);
     });
   };
 
