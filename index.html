@@ -321,7 +321,7 @@
               <p class="text-sm text-center text-gray-500 mb-6">Silakan salin nomor rekening di bawah ini:</p>
 
               <!-- BCA Card -->
-              <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm relative group">
+              <div class="gift-card relative group">
                 <span class="text-xs uppercase tracking-widest font-bold" style="color: var(--primary-gold)">BCA</span>
                 <div class="flex items-center justify-between mt-2">
                   <p id="norek-bca" class="text-xl font-medium tracking-wider">4740740780</p>
@@ -334,7 +334,7 @@
               </div>
 
               <!-- Mandiri Card -->
-              <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm relative group">
+              <div class="gift-card relative group">
                 <span class="text-xs uppercase tracking-widest font-bold"
                   style="color: var(--primary-gold)">Mandiri</span>
                 <div class="flex items-center justify-between mt-2">
@@ -369,6 +369,12 @@
   <audio id="bgMusic" loop>
     <source src="assets/best-part.mp3" type="audio/mpeg" />
   </audio>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-container">
+    <i class="fas fa-check-circle"></i>
+    <span id="toast-message">Berhasil disalin!</span>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

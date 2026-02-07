@@ -180,10 +180,10 @@ section {
 
 /* Event Cards */
 .event-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  border-radius: 0.75rem;
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  border-radius: 1rem;
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   height: auto;
@@ -470,6 +470,45 @@ section {
 
 .animate-modal-zoom {
   animation: modal-zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Gift Cards inside Modal */
+.gift-card {
+  background: white;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.gift-card:hover {
+  border-color: var(--primary-gold);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+}
+
+/* Toast Notification */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  z-index: 9999;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.toast-container.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
 /* Falling Petals - High Performance CSS Animation */

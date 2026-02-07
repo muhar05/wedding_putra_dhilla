@@ -235,7 +235,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.copyToClipboard = function (elementId) {
     const text = document.getElementById(elementId).innerText;
     navigator.clipboard.writeText(text).then(() => {
-      // Basic feedback (optional: use a toast)
+      showToast("Berhasil disalin ke clipboard!");
+
+      // Icon feedback
       const btn = event.currentTarget;
       const originalInner = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-check text-green-500"></i>';
@@ -244,8 +246,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 2000);
     }).catch(err => {
       console.error('Failed to copy: ', err);
+      showToast("Gagal menyalin teks.");
     });
   };
+
+  function showToast(message) {
+    const toast = document.getElementById("toast");
+    const toastMsg = document.getElementById("toast-message");
+    if (!toast || !toastMsg) return;
+
+    toastMsg.textContent = message;
+    toast.classList.add("show");
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  }
 
   // Init
   setGuestName();
